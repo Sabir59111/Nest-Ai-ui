@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Full Height Divider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="./index.css "/>
+
+    <style>
+        body {
+    font-family: 'Montserrat', sans-serif;
+  
+
+
+    background-color:#14161b;
+}
+
+
+      .carousel-container {
+        position: relative;
+        
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .carousel {
+        display: flex;
+        cursor: grab;
+        user-select: none;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .carousel.dragging {
+        cursor: grabbing;
+        transition: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#101216] text-white ">
+    <!-- This is the nav section -->
+    <nav
+      class="bg-[#1A1C23] flex justify-around text-white md:px-8  items-center h-20  md:justify-between "
+    >
+      <div class="flex items-center gap-x-5 ">
+        <p class="text-lg font-bold text-wrap max-w-[50px] md:max-w-full leading-[16px] md:leading-none">Memory NestAI</p>
+        <div class="w-[1px] bg-gray-400 h-20 opacity-30 hidden md:flex"></div>
+        <ul class=" gap-x-4 text-sm hidden md:flex">
+          <li class="text-pink-500 font-semibold">Home</li>
+          <li>Galería</li>
+          <li>Soporte</li>
+        </ul>
+      </div>
+
+      <div class="flex items-center md:gap-x-5  gap-x-4">
+        <div class="flex items-center gap-x-2 cursor-pointer">
+          <span class="text-base  font-bold">ES</span>
+          <i class="fa-solid fa-angle-down text-xs"></i>
+        </div>
+        <button
+          class="bg-gradient-to-r from-[#6C5ED4] to-[#E64D8A] w-[138px] h-[44px] md:px-8 md:py-3 rounded-[50px] flex justify-center items-center gap-x-2"
+        >
+        <img src="./assets/rot.svg" alt="convert icon" width="16px" height="16px" />
+          <span class="text-white text-base font-semibold"> Convertir</span>
+        </button>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-bars"></i>
+            </div>
+    </nav>
+
+    <!-- this is the hero section -->
+    <section class="mt-20 flex flex-col items-center  justify-center  md:flex-row md:gap-20 ">
+      <div id="hero" class="">
+        <img
+          id="heroImage"
+          src="./assets/baby2.svg"
+          alt="baby image"
+          width="220px"
+          height="231px"
+          />
+        
+   
+      </div>
+
+      <div class="flex flex-col  gap-y-4  w-[370px] mt-6 md:w-96">
+        <div>
+          <button
+            class="bg-[#FF3C9A]  rounded-sm text-white text-[12px] font-bold w-[141px] h-[29px]"
+          >
+            IMÁGENES POR IA
+          </button>
+        </div>
+
+        <p class="text-4xl font-bold ">Crea nuevos universos</p>
+        <p class="text-base font-normal text-white">
+          Genera imágenes en escenarios fantásticos con inteligencia artificial
+        </p>
+      </div>
+    </section>
+
+    <!-- this is the hero section -->
+
+    <section class="flex flex-col justify-center items-center  ">
+      <div
+        class="  p-[1px] rounded-3xl bg-gradient-to-r from-purple-500 to-pink-500 w-[370px] md:w-[544px] mt-9 md:mt-20  "
+      >
+        <div class="bg-[#1A1C23] p-6 rounded-3xl text-center ">
+          <p class="text-white font-normal mb-5 opacity-50 text-base ">
+            Sube la imagen que quieres generar
+          </p>
+          <div class="flex justify-center gap-4 flex-wrap">
+
+            <div
+              class="bg-[#352434] text-white  px-8 py-4 bg-opacity-50 rounded-[50px] flex justify-between  gap-x-8 items-center w-[311px] h-[64px] md:w-[232px] md:h-[60px]"
+            >
+            <i class="fa-solid fa-arrow-up rotate-45 text-[#FF3C9A]"></i>
+
+              <text class="text-base font-normal">Subir imagen</text>
+            </div>
+
+      
+            <div
+            class=" bg-gradient-to-r from-[#6C5ED4] to-[#E64D8A]   text-white  px-8 py-4 bg-opacity-50 rounded-[50px] flex justify-between  gap-x-8 items-center w-[311px] h-[64px] md:w-[232px] md:h-[60px]"
+          >
+          <img src="./assets/rot.svg" alt="convert icon" width="16px" height="16px" />
+
+            <text class="text-base font-semibold">Convertir</text>
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#FF3C9A] bg-opacity-5 text-[#FF3C9A] p-3  rounded-lg mt-8  flex items-center gap-x-5 w-[370px] h-[82px] md:w-[544px]  text-xs "
+      >
+        <img src="./assets/caution.svg" alt="convert icon" width="16px" height="16px" />
+        <p class="text-xs font-normal">
+          Es necesario que los ojos del bebé estén cerrados al momento de subir
+          la foto. Esto es crucial para el sistema de IA.
+        </p>
+      </div>
+    </section>
+
+    <section class="flex flex-col justify-center items-center mt-32 w-full px-5 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Explora todos los escenarios</h2>
+      <p class="text-center text-base font-normal w-[390px] md:w-[500px] mt-4 mb-10 text-white px-10">
+        Puedes hacer volar la imaginación con nuestros más de 20 escenarios
+        creativos
+      </p>
+      <div class="carousel-container mt-11 ">
+        <div class="carousel gap-x-4 w-full" id="carousel">
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_1.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_2.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_3.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_4.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_2.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+          <img
+            class="carousel-item rounded-xl"
+            src="./assets/slider_1.svg"
+            alt="baby image"
+            width="300"
+            height="370"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center items-center my-12 gap-x-3">
+      <img src="./assets/elipse.svg" alt="elipse" width="12px" />
+      <img src="./assets/elipse2.svg" alt="elipse" width="12px" />
+      <img src="./assets/elipse2.svg" alt="elipse" width="12px" />
+      <img src="./assets/elipse2.svg" alt="elipse" width="12px" />
+      <img src="./assets/elipse2.svg" alt="elipse" width="12px" />
+      <img src="./assets/elipse2.svg" alt="elipse" width="12px" />
+    </div>
+
+    <section class=" flex flex-col justify-center mt-[70px] mx-auto  px-5 ">
+
+        <div class="flex flex-col md:flex-row md:justify-between gap-8 ">
+
+            <div class="flex flex-col justify-start items-start">
+                <img src="./assets/baby_info.svg" class="w-[370px] h-[286px] md:w-[880px] object-cover rounded-xl " height="286px" alt="baby pic" />
+                <p class="text-sm mt-8">BENEFICIOS</p>
+                <h2 class="text-xl font-bold">Creando juntos</h2>
+                <p class="text-base max-w-xl mt-4">La IA puede transformar fotos con un toque divertido, profesional, o emotivo según el tipo de sesión que elijas.</p>
+            </div>
+
+            <div class="flex flex-col justify-start items-start">
+                <img src="./assets/baby_info2.svg" class="w-[370px] h-[286px] md:w-[880px] object-cover rounded-xl " height="286px" alt="baby pic" />
+                <p class="text-sm mt-8 font-semibold">PRECIOS</p>
+                <h2 class="text-xl font-bold mt-2">Planes para todos</h2>
+                <p class="text-base max-w-xl mt-5">Precios de las sesiones de fotos, incluyendo si hay algún coste adicional por el desplazamiento o por otros.</p>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col md:flex-row md:justify-between gap-8 mt-12">
+
+           
+          <div class="flex flex-col justify-start items-start">
+            <img src="./assets/baby_info3.svg" class="w-[370px] h-[286px] md:w-[880px] object-cover rounded-xl " height="286px" alt="baby pic" />
+            <p class="text-sm mt-8">DESPLAZAMIENTO</p>
+            <h2 class="text-xl font-bold">Vamos donde sea</h2>
+            <p class="text-base max-w-xl mt-4">Si se realizan desplazamientos para hacer sesiones físicas, costo según área de cobertura.</p>
+        </div>
+           
+        <div class="flex flex-col justify-start items-start">
+          <img src="./assets/baby_info4.svg" class="w-[370px] h-[286px] md:w-[880px] object-cover rounded-xl " height="286px" alt="baby pic" />
+          <p class="text-sm mt-8">TENER EN CUENTA</p>
+          <h2 class="text-xl font-bold">Cierra los ojos</h2>
+          <p class="text-base max-w-xl mt-4">Los ojos del bebé deben estar cerrados al momento de subir la foto. Esto es crucial para el sistema de IA.</p>
+      </div>
+
+        </div>
+
+        <div class="flex justify-center w-full my-12">
+          <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-[1px] rounded-full   mt-6 ">
+            <button class="bg-[#2d313d]  px-20 py-4 rounded-full font-semibold" >
+              Empezar a crear
+            </button>
+            </div>
+        </div>
+        
+    </section>
+
+    <section>
+
+        <div class="flex flex-col text-center justify-center items-center mt-20 px-5">
+            <h2 class="text-base font-semibold">PLANES Y PRECIOS</h2>
+            <p class="text-4xl font-bold mt-[6px]  ">Empieza a crear</p>
+            <p class="mt-5 text-base font-normal">Empieza probando y luego compra un plan que se ajuste a tus necesidades.</p>
+          
+        </div>
+
+        <div class="flex justify-center gap-12 mt-12 flex-wrap">
+          <div class="flex justify-center items-center ">
+            <div class="bg-gradient-to-r from-[#6C5DD3] to-[#E54C8A] p-[1px] rounded-xl">
+              <div class="bg-[#21242c] w-[370px] h-[294px]  md:w-[413px] md:h-[491px] p-6 text-center rounded-xl flex flex-col justify-center items-center">
+                <p class="text-white text-5xl font-bold">Gratis</p>
+                <h2 class="text-base  text-white mt-3 font-normal">
+                  Empieza probando y luego compra un plan que se ajuste a tus necesidades.
+                </h2>
+                <button class="font-semibold bg-gradient-to-r from-purple-500 to-pink-500 text-white px-20 py-4 rounded-full flex items-center justify-center gap-2 mt-6 mx-auto">
+                Ver precios
+                </button>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="flex justify-center items-center ">
+            <div class="bg-gradient-to-r from-[#6C5DD3] to-[#E54C8A] p-[1px]  rounded-xl">
+              <div class="bg-[#21242c] w-[370px] h-[294px]  md:w-[413px] md:h-[491px] p-6 text-center  rounded-xl flex flex-col justify-center items-center">
+                <p class="text-white text-5xl font-bold">19,90 €</p>
+                <h2 class="text-base  text-white mt-3 font-normal">
+                  Empieza probando y luego compra un plan que se ajuste a tus necesidades.
+                </h2>
+                <button class="font-semibold bg-gradient-to-r from-purple-500 to-pink-500 text-white px-20 py-4 rounded-full flex items-center justify-center gap-2 mt-6 mx-auto">
+                Ver precios
+                </button>
+              </div>
+            </div>
+          </div>
+
+          
+        
+        </div>
+        <div class="flex justify-center w-full my-12 ">
+          <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-[1px] rounded-[50px]    ">
+            <button class="bg-[#2d313d]  px-20 py-4 rounded-[50px] font-semibold " >
+              Ver precios
+            </button>
+            </div>
+        </div>
+    
+    </section>
+
+    <div class="flex items-center justify-center mt-20 ">
+
+      <div class="bg-gradient-to-r from-[#6F5CD1] to-[#E34B8A] text-white p-8 rounded-2xl w-[370px] h-[459px] text-center md:text-wrap  md:w-[1016px] md:h-[231px] flex justify-between gap-8 flex-wrap">
+       <div class="md:w-[400px] md:text-left">
+        <p class="text-base font-semibold uppercase">Newsletter</p>
+        <h2 class="text-4xl font-bold mt-2">Mantente informado</h2>
+        <p class="text-white mt-5 font-normal text-sm">Conecta con nuestras últimas noticias y actualizaciones, y entérate de nuestras más recientes novedades.</p>
+       </div>
+      
+          
+          <div class="mt-6 flex flex-col  gap-4 items-start ">
+              <input type="email" placeholder="Correo electrónico" 
+                     class=" w-[310px] md:w-[488px] h-[60px]  p-3 rounded-full md:rounded-lg bg-[#2D313D4D] opacity-65 text-white placeholder-white focus:outline-none">
+                     <div class="div">
+                      <button class="bg-[#2D313D] rounded-full text-white   font-semibold w-[310px] md:w-[154px] h-[61px] ">
+                        Suscribirme
+                    </button>
+                     </div>
+             
+          </div>
+  
+      </div>
+
+      
+  
+  </div>
+  <p class="text-xs text-[#E24A8A] mt-7 text-center">*Texto de protección de datos</p>
+
+
+  <div >
+    <footer class="bg-[#21242C] text-white py-8 mt-20 px-9">
+      <div class="flex flex-col justify-center items-center md:flex-row md:justify-between ">
+        <!-- Logo & Address -->
+        <div class="text-center md:text-left">
+          <h2 class="text-xl font-semibold ">MemoryNestAI</h2>
+          <div class="flex gap-x-3 mt-12">
+            <img src="./assets/icon.svg" alt="logo" width="50px" height="50px" />
+            <img src="./assets/insta.svg" alt="logo" width="50px" height="50px" />
+            <img src="./assets/youtube.svg" alt="logo" width="50px" height="50px" />
+            <img src="./assets/twitter.svg" alt="logo" width="50px" height="50px" />
+
+           
+          </div>
+          <p class="text-white opacity-30 text-xs my-2  ">
+            Carrer dels Pescadors, 48<br />
+            Barcelona, 08021, ES 
+          </p>
+        </div>
+    
+        <!-- Information Links -->
+        <div class="flex flex-col gap-5 md:flex md:gap-12 text-center md:text-left md:flex-row mt-5 md:mt-0">
+          <div>
+            <h3 class="text-xs font-normal text-white opacity-25 ">INFORMACIÓN</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-white text-xs font-normal">POLÍTICAS DE PRIVACIDAD</a></li>
+              <li><a href="#" class="text-white text-xs font-normal">FAQS</a></li>
+              <li><a href="#" class="text-white text-xs font-normal">INVERSORES</a></li>
+              <li><a href="#" class="text-white text-xs font-normal">CONTACTO</a></li>
+            </ul>
+          </div>
+        
+  
+          <div>
+            <h3 class="text-xs font-normal text-white opacity-25 mb-3">MENU</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-white text-xs font-normal">PRODUCT</a></li>
+              <li><a href="#" class="text-white text-xs font-normal">INTEGRATION</a></li>
+              <li><a href="#" class="text-white text-xs font-normal">BLOG</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+    
+        <!-- Menu Links -->
+    
+    
+      <!-- Copyright -->
+  
+    </footer>
+    
+    <p class="text-center text-gray-400 text-xs my-5">
+      TODOS LOS DERECHOS RESERVADOS. 2025
+    </p>
+
+  </div>
+
+ 
+  
+  </body>
+</html>
